@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Detayı</title>
+    <link rel="stylesheet" href="~/css/details.css">
+</head>
+<body>
+    <header>
+        <h1>Ürün Detayı</h1>
+    </header>
+
+    <main>
+        <section id="product-details">
+            
+            <div id="product-images">
+                <img src="~/lib/Iphone13_blue.jpg" alt="Ürün Resmi" id="main-image">
+                <div id="thumbnail-images">
+                    <img src="~/lib/Iphone13_blue.jpg" alt="Ürün Resmi 1" class="thumbnail" data-color="blue">
+                    <img src="~/lib/Iphone13_blue2.jpg" alt="Ürün Resmi 2" class="thumbnail" data-color="blue">
+                    <img src="~/lib/Iphone13_blue3.jpg" alt="Ürün Resmi 3" class="thumbnail" data-color="blue">
+                    <img src="~/lib/Iphone13_red.jpg" alt="Ürün Resmi 1" class="thumbnail" data-color="red">
+                    <img src="~/lib/Iphone13_red2.jpg" alt="Ürün Resmi 2" class="thumbnail" data-color="red">
+                    <img src="~/lib/Iphone13_red3.jpg" alt="Ürün Resmi 3" class="thumbnail" data-color="red">
+                    <img src="~/lib/Iphone13_green.jpg" alt="Ürün Resmi 2" class="thumbnail" data-color="green">
+                    <img src="~/lib/Iphone13_green2.jpg" alt="Ürün Resmi 3" class="thumbnail" data-color="green">
+                    <img src="~/lib/Iphone13_green3.jpg" alt="Ürün Resmi 3" class="thumbnail" data-color="green">
+                </div>
+                <div class="features-container">
+                    <div class="feature-column">
+                        <ul>
+                            <li id="ozellik1"><strong>Kapasite:</strong> 128 GB</li>
+                            <li><strong>Mobil Ram Boyutu:</strong> 6 GB</li>
+                            <li><strong>İşletim Sistemi Türü:</strong> iOS</li>
+                            <li><strong>Yüz Tanıma:</strong> Var</li>
+                        </ul>
+                    </div>
+                    <div class="feature-column">
+                        <ul>
+                            <li><strong>Ekran Boyutu:</strong> 6.1 inch</li>
+                            <li><strong>Ekran Boyutu Aralığı:</strong> 5.6 inç - 6.5 inç</li>
+                            <li><strong>Pil Gücü:</strong> 3279 mAh</li>
+                            <li><strong>Kamera Çözünürlük:</strong> 12 MP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="product-options">
+                <h2 id="product-title">iPhone 13: Mavi - 128 GB</h2>
+                <div class="option">
+                    <h1 id="price">Fiyat</h1>
+                </div>
+                <div class="option">
+                    <h2>Renk Seçenekleri</h2>
+                    <input type="radio" id="blue" name="color" value="blue">
+                    <label for="blue">Mavi</label>
+                    <input type="radio" id="red" name="color" value="red">
+                    <label for="red">Kırmızı</label>
+                    <input type="radio" id="green" name="color" value="green">
+                    <label for="green">Yeşil</label>
+                </div>
+                <div class="option">
+                    <h2>GB Seçenekleri</h2>
+                    <input type="radio" id="gb128" name="storage" value="128">
+                    <label for="gb128">128 GB</label>
+                    <input type="radio" id="gb256" name="storage" value="256">
+                    <label for="gb256">256 GB</label>
+                    <input type="radio" id="gb512" name="storage" value="512">
+                    <label for="gb512">512 GB</label>
+                </div>
+                <div id="buy-options">
+                    <button id="add-to-cart">Sepete Ekle</button>
+                    <button id="quick-buy">Hızlı Al</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tüm hakları saklıdır. © 2024 Serkan Shop</p>
+    </footer>
+
+    <script src="~/js/Script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('main-image');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function () {
+                    const imageUrl = this.getAttribute('src');
+                    mainImage.setAttribute('src', imageUrl);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+

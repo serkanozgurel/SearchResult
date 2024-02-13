@@ -1,0 +1,147 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#product-images {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#thumbnail-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    #thumbnail-images .thumbnail {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+        #thumbnail-images .thumbnail:last-child {
+            margin-right: 0;
+        }
+
+#main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#product-options {
+    flex: 1;
+    background-color: #f0f0f0;
+}
+
+.option {
+    margin-bottom: 20px;
+    margin-left:20px
+}
+
+    .option h2 {
+        margin-bottom: 10px;
+    }
+
+    .option label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .option input[type="radio"] {
+        display: none;
+    }
+
+        .option input[type="radio"] + label {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .option input[type="radio"]:checked + label {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .option input[type="radio"]:disabled + label {
+            cursor: not-allowed;
+            background-color: rgba(0, 0, 0, 0.2); /* Şeffaf arka plan */
+            color: rgba(0, 0, 0, 0.5); /* Opak metin rengi */
+            pointer-events: none; /* Tıklamaları devre dışı bırak */
+            position: relative; /* Pozisyonu ayarla */
+        }
+
+            .option input[type="radio"]:disabled + label::before {
+                content: '\00D7'; /* Çarpı simgesi */
+                position: absolute; /* Mutlak pozisyon */
+                top: 50%; /* Yatay merkezle */
+                left: 50%; /* Dikey merkezle */
+                transform: translate(-50%, -50%); /* Merkezden hareket et */
+                font-size: 14px; /* Simge boyutu */
+                color: rgba(255, 255, 255, 0.5); /* Opak simge rengi */
+            }
+
+#price {
+    color: darkblue;
+}
+.features-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-column {
+    flex: 1;
+}
+
+    .feature-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .feature-column ul li {
+            margin-bottom: 10px;
+        }
+#buy-options {
+    text-align: center;
+}
+
+    #buy-options button {
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        padding: 15px 30px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+        #buy-options button:hover {
+            background-color: darkgray;
+        }

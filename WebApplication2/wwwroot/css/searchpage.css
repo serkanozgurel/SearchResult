@@ -1,0 +1,122 @@
+﻿/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+    header h1 {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#search-results h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#search-results ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    #search-results ul li {
+        width: calc(33.33% - 20px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        #search-results ul li:last-child {
+            margin-right: 0;
+        }
+
+        #search-results ul li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+            #search-results ul li a:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+        #search-results ul li img {
+            width: 100%;
+            height: auto;
+        }
+
+        #search-results ul li .product-info {
+            padding: 20px;
+        }
+
+            #search-results ul li .product-info h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            #search-results ul li .product-info p {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 5px;
+            }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    footer p {
+        font-size: 14px;
+    }
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
